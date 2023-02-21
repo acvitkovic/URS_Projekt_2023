@@ -6,10 +6,10 @@
 
 int main(void)
 {
-
+	DDRB = 0x00;
+	PORTB = 0x0f;
+	
    	DDRD = _BV(4);
-   	DDRC = 0xf0;
-   	PORTC = 0x0f;
 
    	TCCR1A = _BV(COM1B1) | _BV(WGM10);
    	TCCR1B = _BV(WGM12) | _BV(CS11);
@@ -18,6 +18,6 @@ int main(void)
    	lcd_init(LCD_DISP_ON);
    	lcd_clrscr();
    	
-   	lcd_puts("Hello World");
+   	lcd_puts("Choose game");
 }
 
