@@ -2,7 +2,10 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+
 #include "lcd.h"
+
+#include "game.h"
 
 int main(void)
 {
@@ -19,5 +22,31 @@ int main(void)
    	lcd_clrscr();
    	
    	lcd_puts("Choose game");
+	   
+	int totalScore = 0;
+	int score = 0;
+	
+	   
+	while(1){
+		if(bit_is_clear(PINB, 0)){
+			score = game1();
+			totalScore = totalScore + score;
+		}else if(bit_is_clear(PINB, 1)){
+			score = game2();
+			totalScore = totalScore + score;
+		}else if(bit_is_clear(PINB, 2)){
+			lcd_clrscr();
+			if(totalScore){
+				lcd_puts("Player 1 wins");
+			}else if(totalScore == 0){
+				lcd_puts("Draw");
+			}else{
+				lcd_puts("Player 2 wins");
+			}
+			totalScore = 0;
+			score = 0;
+			_delay_ms(1000);
+		}
+	}
 }
 
