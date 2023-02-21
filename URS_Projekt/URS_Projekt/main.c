@@ -1,4 +1,4 @@
-#definen F_CPU 7372800UL
+#define F_CPU 7372800UL
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -7,8 +7,17 @@
 int main(void)
 {
 
-    while (1) 
-    {
-    }
+   	DDRD = _BV(4);
+   	DDRC = 0xf0;
+   	PORTC = 0x0f;
+
+   	TCCR1A = _BV(COM1B1) | _BV(WGM10);
+   	TCCR1B = _BV(WGM12) | _BV(CS11);
+   	OCR1B = 128;
+
+   	lcd_init(LCD_DISP_ON);
+   	lcd_clrscr();
+   	
+   	lcd_puts("Hello World");
 }
 

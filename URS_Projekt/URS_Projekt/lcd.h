@@ -83,7 +83,7 @@
  *  ports by adapting the LCD_DATAx_PORT and LCD_DATAx_PIN definitions.
  *  
  */
-#define LCD_PORT         PORTB        /**< port for the LCD lines   */
+#define LCD_PORT         PORTD        /**< port for the LCD lines   */
 #define LCD_DATA0_PORT   LCD_PORT     /**< port for 4bit data bit 0 */
 #define LCD_DATA1_PORT   LCD_PORT     /**< port for 4bit data bit 1 */
 #define LCD_DATA2_PORT   LCD_PORT     /**< port for 4bit data bit 2 */
