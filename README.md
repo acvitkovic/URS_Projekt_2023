@@ -4,3 +4,5 @@
 LCD libraries used written by: Peter Fleury <pfleury@gmx.ch>
 
 Faculty of Engineering, Rijeka.
+
+![alt text](/Documentation/IMG_20230222_174422)

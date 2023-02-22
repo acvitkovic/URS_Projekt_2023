@@ -1,0 +1,1 @@
+ This is a final project for the subject Embedded Computer Systems by Antonio CvitkoviÄ‡, Matej AniÄ‡ and Matija Barac. It utilizes AVR ATMega32A by Atmel, MyoWare Muscle Sensor by Advancer Technologies, Sound Sensor and an LCD screen.
