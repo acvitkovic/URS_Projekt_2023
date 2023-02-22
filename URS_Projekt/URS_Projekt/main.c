@@ -24,10 +24,13 @@ int main(void)
    	lcd_puts("Choose game");
 	   
 	int totalScore = 0;
-	int score = 0;
+	int score;
 	
 	   
 	while(1){
+		
+		
+		
 		if(bit_is_clear(PINB, 0)){
 			score = game1();
 			totalScore = totalScore + score;
@@ -36,7 +39,7 @@ int main(void)
 			totalScore = totalScore + score;
 		}else if(bit_is_clear(PINB, 2)){
 			lcd_clrscr();
-			if(totalScore){
+			if(totalScore > 0){
 				lcd_puts("Player 1 wins");
 			}else if(totalScore == 0){
 				lcd_puts("Draw");
@@ -46,6 +49,8 @@ int main(void)
 			totalScore = 0;
 			score = 0;
 			_delay_ms(1000);
+			lcd_clrscr();
+			lcd_puts("Choose game");
 		}
 	}
 }
