@@ -1,5 +1,3 @@
- This is a final project for the subject Embedded Computer Systems by Antonio CvitkoviÄ‡, Matej AniÄ‡ and Matija Barac. It utilizes AVR ATMega32A by Atmel, MyoWare Muscle Sensor by Advancer Technologies, Sound Sensor and an LCD screen.
-
 Igre se biraju korištenjem tipki mikrokontrolera. Prva igra sa tipkom 1(u kodu 0), druga igra sa tipkom 2(u kodu 1) i rezultat te novi početak sa tipkom 3(u kodu 2).
 Prva igra je implementirana koristeći MyoWare Muscle Sensor spojen na ATmega32A mikrokontroler putem ADC kanala 0.
 
