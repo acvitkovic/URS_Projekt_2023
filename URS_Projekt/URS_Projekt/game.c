@@ -4,8 +4,6 @@
 
 #include <util/delay.h>
 #include <stdlib.h>
-
-
 #include "lcd.h"
 
 void writeADCtoLCD(uint16_t adcvalue){
